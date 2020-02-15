@@ -18,7 +18,7 @@ module.exports = app => {
     res.send(req.user);
   });
 
-  app.get("/", () => {
-    res.send("Server running on port:", process.env.PORT);
+  app.get("/", (req, res) => {
+    res.send("Helo!");
   });
 };
