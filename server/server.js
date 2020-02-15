@@ -1,8 +1,13 @@
 const express = require("express");
-require("./services/passport");
 const keys = require("./config/keys");
+require("./models/Users");
+require("./services/passport");
+
 const mongoose = require("mongoose");
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 
 const PORT = 5000;
 const app = express();
