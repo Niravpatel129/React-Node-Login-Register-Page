@@ -1,14 +1,16 @@
 import React from "react";
 import "./App.css";
 
+const ApiRoute = "https://login-register-prod.herokuapp.com/";
+
 function App() {
   return (
     <div className="App">
-      <a href="/auth/google">Click To Login</a>
+      <a href={ApiRoute + "/auth/google"}>Click To Login</a>
       <br />
-      <a href="/api/logout">Click To Logout</a>
+      <a href={ApiRoute + "/api/logout"}>Click To Logout</a>
       <br />
-      <a href="/api/current_user">Click To View Profile</a>
+      <a href={ApiRoute + "/api/current_user"}>Click To View Profile</a>
     </div>
   );
 }
